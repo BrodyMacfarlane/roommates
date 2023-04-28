@@ -12,7 +12,44 @@ module.exports = {
         'gradient-conic':
           'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
       },
+      colors: {
+        'roommates': {
+          'purple': '#6622CC',
+          'pink': '#DA4167',
+          'yellow': '#F4D35E',
+          'coral': '#F78764',
+          'beige': '#EBEBD3',
+        }
+      },
+      theme: {
+        screens: {
+          'sm': '670px',
+          'md': '768px',
+          'lg': '1024px',
+          'xl': '1280px',
+          '2xl': '1536px',
+        }
+      }
     },
   },
-  plugins: [],
+  plugins: [
+    function ({ addBase, theme }) {
+      function extractColorVars(colorObj, colorGroup = '') {
+        return Object.keys(colorObj).reduce((vars, colorKey) => {
+          const value = colorObj[colorKey];
+
+          const newVars =
+            typeof value === 'string'
+              ? { [`--color${colorGroup}-${colorKey}`]: value }
+              : extractColorVars(value, `-${colorKey}`);
+
+          return { ...vars, ...newVars };
+        }, {});
+      }
+
+      addBase({
+        ':root': extractColorVars(theme('colors')),
+      });
+    },
+  ],
 }
