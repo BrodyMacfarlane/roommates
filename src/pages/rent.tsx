@@ -2,7 +2,7 @@ import RentCalc from '@/components/RentCalc'
 import { PageContainer } from '@/components/Container'
 import Header from '@/components/Header'
 
-export default () => {
+export default function Rent() {
   return (
     <PageContainer>
       <Header />

@@ -1,7 +1,7 @@
 import { PageContainer } from '@/components/Container'
 import Header from '@/components/Header'
 
-export default () => {
+export default function Custom404() {
   return (
     <PageContainer>
       <Header />

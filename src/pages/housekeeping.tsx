@@ -2,7 +2,7 @@ import Housekeeping from '@/components/Housekeeping'
 import { PageContainer } from '@/components/Container'
 import Header from '@/components/Header'
 
-export default () => {
+export default function HousekeepingPage() {
   return (
     <PageContainer>
       <Header />
