@@ -1,14 +1,14 @@
 import RentCalc from '@/components/RentCalc'
 import { PageContainer } from '@/components/Container'
 import Header from '@/components/Header'
-import { HomeLink } from '@/components/Link'
 
-export default function Home() {
+export default () => {
   return (
     <PageContainer>
       <Header />
-      <HomeLink text='Rent Calculator' href='/rent' />
-      <HomeLink text='Housekeeping' href='/housekeeping' />
+      <div className='rent-calculator-outer-container'>
+        <RentCalc />
+      </div>
     </PageContainer>
   )
 }

@@ -53,10 +53,16 @@ export default function RentCalc() {
       </div>
       <div className='mt-4 sm:mt-8 bg-roommates-yellow bg-opacity-10 p-4 sm:p-8 rounded-lg'>
         <div className="mb-4 sm:mb-8">
-          <h2 className='text-lg sm:text-2xl lowercase'><div className="opacity-90">Person 1 will pay </div>${person1RentPay}</h2>
+          <h2 className='text-lg sm:text-2xl lowercase'>
+            <div className="opacity-90">Person 1 will pay </div>
+            <div>${person1RentPay}</div>
+          </h2>
         </div>
         <div className="mt-4 sm:mt-8">
-          <h2 className='text-lg sm:text-2xl lowercase'><div className="opacity-90">Person 2 will pay </div>${person2RentPay}</h2>
+          <h2 className='text-lg sm:text-2xl lowercase'>
+            <div className="opacity-90">Person 2 will pay </div>
+            <div>${person2RentPay}</div>
+          </h2>
         </div>
       </div>
     </div>

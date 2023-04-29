@@ -31,3 +31,28 @@ body {
   color: var(--color-roommates-beige);
   background: linear-gradient(var(--color-roommates-purple), #8838ff);
 }
+
+.link-bg {
+  background: linear-gradient(0deg, #F78764 50%, rgb(244, 211, 94, 0.1) 50%);
+  height: 200%;
+  top: 0;
+  transform: translateY(0%);
+  transition: 0.1s ease-in-out;
+}
+
+a:hover .link-bg,
+a:active .link-bg {
+  transform: translateY(-50%);
+  transition: 0.2s ease-in-out;
+}
+
+.header-underline {
+  transform: translateY(100%);
+  transition: 0.1s ease-in-out;
+}
+
+a:hover .header-underline,
+a:active .header-underline {
+  transform: translateY(0%);
+  transition: 0.2s ease-in-out;
+}
